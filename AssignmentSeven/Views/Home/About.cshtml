@@ -1,0 +1,19 @@
+﻿@{
+
+
+    ViewBag.Title = "Low Budget Reddit";
+}
+<h2>@ViewBag.Title.</h2>
+<h3>@ViewBag.Message</h3>
+
+<p>Reddit Version Minus 2.ooooohhhhh!</p>
+
+
+@for (int i = 1; i < ViewBag.RedditTopTen.Count; i++)
+{
+    <p>@i: @ViewBag.RedditTopTen[i - 1].Title</p>
+    <p><img src="@Url.Content(ViewBag.RedditTopTen[i-1].Thumbnail)" /></p>
+    <p><a href="@ViewBag.RedditTopTen[i-1].LinkURL">'Link to Post'</a></p>
+    <p> --------------------</p>
+
+}
